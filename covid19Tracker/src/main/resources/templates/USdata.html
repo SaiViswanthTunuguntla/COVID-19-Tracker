@@ -13,20 +13,34 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="/">COVID-19</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+<!--            <span class="navbar-toggler-icon"></span>-->
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="/getdata">World Data</a>
-                <a class="nav-item nav-link" href="/getUSAdata">USA Data</a>
+                <a class="nav-item nav-link active" href="/getdata">World Data</a>
+                <a class="nav-item nav-link active" href="/getUSAdata">USA Data</a>
             </div>
         </div>
     </nav>
     <div class="jumbotron ">
         <h3 class="display-6">Covid-19 USA Dashboard</h3>
         <p class="lead">This page gives statistics of each county and state of USA effected due to COVID-19.</p>
-        Total Effected as of today:<H1 th:text="${effectedpeople}"/>
+        <table id="table2" class="table table-striped " style="width:100%">
+            <thead class="bg-info">
+            <tr>
+                <th scope="col">Total Effected as of today  </th>
+                <th scope="col">Cases added today</th>
+            </tr>
+            </thead>
+            <tbody>
+            <td  th:text="${effectedpeople}" />
+            <td  th:text="${casesAddedToady}" />
+            </tbody>
+
+<!--        Total Effected as of today:                     CasesAddedToday:-->
+<!--        <H1 th:text="${effectedpeople}"/>            <H3 th:text="${casesAddedToady}"/>-->
+
         <hr class="my-4">
         <table id="table1"  class="table table-striped " style="width:100%">
             <thead class="thead-dark">

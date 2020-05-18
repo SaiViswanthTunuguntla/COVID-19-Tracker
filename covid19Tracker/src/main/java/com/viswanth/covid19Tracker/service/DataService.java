@@ -88,10 +88,10 @@ public class DataService {
             datapojo.setChangeFromPreviousDay(effectedCount-previousDayCount);
             USdataList.add(datapojo);
         }
-        for(Datapojo d:USdataList)
-        {
-            System.out.println(d);
-        }
+//        for(Datapojo d:USdataList)
+//        {
+//            System.out.println(d);
+//        }
         this.USACasesList=USdataList;
         return USACasesList;
     }

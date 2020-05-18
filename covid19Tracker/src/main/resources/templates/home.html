@@ -26,7 +26,19 @@
     <div class="jumbotron ">
             <h3 class="display-6">Covid-19 World Dashboard</h3>
             <p class="lead">This page gives statistics of each country effected due to COVID-19.</p>
-            Total Effected as of today:<H1 th:text="${effectedpeople}"/>
+        <table id="table2" class="table table-striped " style="width:100%">
+            <thead class="bg-info">
+            <tr>
+                <th scope="col">Total Effected as of today  </th>
+                <th scope="col">Cases added today</th>
+            </tr>
+            </thead>
+            <tbody>
+            <td H1 th:text="${effectedpeople}" />
+            <td H3 th:text="${casesAddedToady}" />
+            </tbody>
+<!--            Total Effected as of today:<H1 th:text="${effectedpeople}"/>-->
+<!--                CasesAddedToday:  <H3 th:text="${casesAddedToady}"/>-->
         <hr class="my-4">
     <table id="table1"  class="table table-striped " style="width:100%">
         <thead class="thead-dark">
